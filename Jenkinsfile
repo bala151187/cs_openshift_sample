@@ -8,6 +8,7 @@ node {
     }
     stage('Code Quality')
     {
+        sh 'echo $env'
     bat "\"${env.msbuild}\" example.sln"   
     }
 
