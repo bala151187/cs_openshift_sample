@@ -9,7 +9,7 @@ node {
     stage('Code Quality')
     {
    
-        def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.sonar.MsBuildSQRunnerInstallation'
+        def msbuild = tool name: 'NewSonarScanner', type: 'hudson.plugins.sonar.MsBuildSQRunnerInstallation'
         bat "\"${msbuild}\" example.sln"
   }
 
