@@ -10,7 +10,7 @@ node {
     {
    
         def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.sonar.MsBuildSQRunnerInstallation'
-        bat "\"${msbuild}\"\\SonarQube.Scanner.MSBuild.exe example.sln"
+        bat "\"${msbuild}\"\\SonarQube.Scanner.MSBuild.exe begin /k:demo /d:sonar.host.url=http://localhost:9000 /d:sonar.login=dbd529efca4c5cf0dccf3922e67ca4f95183d05a example.sln"
   }
 
 }
