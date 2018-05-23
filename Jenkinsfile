@@ -12,7 +12,7 @@ node {
     
             bat "\"${msbuild}\"\\SonarQube.Scanner.MSBuild.exe begin /k:demo123 /n:demo /d:sonar.host.url=http://localhost:9000 /d:sonar.login=dbd529efca4c5cf0dccf3922e67ca4f95183d05a /d:sonar.verbose=true"
             bat "\"${tool name: 'MSBuild', type: 'msbuild'}\" example.sln"
-            bat "\"${msbuild}\"\\SonarQube.Scanner.MSBuild.exe end"
+            bat "\"${msbuild}\"\\SonarQube.Scanner.MSBuild.exe end /k:demo123 /n:demo /d:sonar.host.url=http://localhost:9000 /d:sonar.login=dbd529efca4c5cf0dccf3922e67ca4f95183d05a"
     
    }
 }
