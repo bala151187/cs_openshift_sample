@@ -10,7 +10,7 @@ node {
     {
    
         def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.sonar.MsBuildSQRunnerInstallation'
-        bat "${msbuild} example.sln"
+        bat "\"${msbuild}\" example.sln"
   }
 
 }
