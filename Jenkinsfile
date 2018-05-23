@@ -9,7 +9,7 @@ node {
     stage('Code Quality')
     {
    
-        def msbuild = tool name: 'C:\\Program Files (x86)\\Jenkins\\tools', type: 'hudson.plugins.sonar.MsBuildSQRunnerInstallation'
+        def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.sonar.MsBuildSQRunnerInstallation'
         bat "${msbuild} example.sln"
   }
 
