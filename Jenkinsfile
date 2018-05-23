@@ -1,9 +1,5 @@
 node {
 
-     tools {
-        msbuild "DefaultMSBuild"
-    }
-
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
@@ -12,6 +8,10 @@ node {
     stage('Code Quality')
     {
    
+     tools {
+        msbuild "DefaultMSBuild"
+    }
+
         def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.sonar.MsBuildSQRunnerInstallation'
         bat "\"${tool name: 'DefaultMSBuild', type: 'msbuild'}\"\\msbuild.exe example.sln"
     }
