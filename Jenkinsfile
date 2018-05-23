@@ -8,7 +8,7 @@ node {
     }
     stage('Code Quality')
     {
-    def sqScannerMsBuildHome = tool 'Scanner for MSBuild 2.2'
+   
         def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.sonar.MsBuildSQRunnerInstallation'
         bat "${msbuild} example.sln"
   }
